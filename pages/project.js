@@ -1,16 +1,13 @@
 import styled from 'styled-components'
 import Meta from '../src/infra/Meta'
+import Working from '../src/components/Working'
 
-const Title = styled.h1`
-  font-size: 50px;
-`
-
-export default function Home() {
+export default function Project() {
 
   return(
     <>
       <Meta title='O Projeto' />
-      <Title>Sobre o projeto</Title>
+      <Working/>
     </>
   ) 
 
