@@ -17,7 +17,7 @@ const Wrapper = styled.div`
     margin: 60px auto;
 
     h2{
-        margin: 15px;
+        margin: 15px 15px 15px 80px;
     }
 
     img{
