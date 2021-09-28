@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Meta title='Home' />
 
-      {/* <FirstSection>
+      <FirstSection>
 
         <h2>Se tiver algum Título</h2>
         
@@ -43,7 +43,7 @@ export default function Home() {
           <img src={lucas} alt="Victor Ferreira" />
         </div>
 
-      </SecondSection> */}
+      </SecondSection>
 
     </>
   ) 
