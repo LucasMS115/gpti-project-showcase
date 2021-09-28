@@ -80,6 +80,7 @@ const GlobalStyle = createGlobalStyle`
 
     p{
        font-size: 1rem;
+       line-height: 1.4rem;
     }
 
     span{

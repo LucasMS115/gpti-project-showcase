@@ -51,5 +51,9 @@ const NavContainer = styled.div`
             margin-right: 25px; 
             font-size: 1rem;
         }
+
+        li:hover{
+            color: var(--color-secondary);
+        }
     }
 `
