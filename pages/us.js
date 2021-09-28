@@ -7,7 +7,7 @@ import lucas from '../public/images/us/lucas.jpg'
 
 export default function Us() {
 
-  return(
+  return (
     <>
       <Meta title='Sobre Nós' />
 
@@ -19,28 +19,28 @@ export default function Us() {
 
           <div>
             <figure>
-              <img src={lucas} alt="Lucas Mendes Sales"/>
+              <img src={lucas} alt="Lucas Mendes Sales" />
             </figure>
             <p>Lucas M. Sales</p>
           </div>
-          
+
           <div>
             <figure>
-              <img src={pinguins} alt="Pinguins"/>
+              <img src={pinguins} alt="Pinguins" />
             </figure>
             <p>Pinguins</p>
           </div>
 
           <div>
             <figure>
-              <img src={lucas} alt="Lucas Mendes Sales"/>
+              <img src={lucas} alt="Lucas Mendes Sales" />
             </figure>
             <p>Lucas M. Sales</p>
           </div>
 
           <div>
             <figure>
-              <img src={pinguins} alt="Pinguins"/>
+              <img src={pinguins} alt="Pinguins" />
             </figure>
             <p>Pinguins</p>
           </div>
@@ -50,10 +50,45 @@ export default function Us() {
 
       </SectionEquipe>
 
-      <Separator/>
+      <Separator />
+
+      <SectionOrigem>
+
+        <h2>Origem</h2>
+
+        <div>
+
+          <div>
+            <p>Texto que explique a origem do grupo e da ideia blaba, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+
+          <div>
+            <img src={pinguins} alt="Masp" />
+          </div>
+
+        </div>
+
+      </SectionOrigem>
+
+      <Separator />
+
+      <SectionColaboradores>
+
+        <h2>Colaboradores do Projeto</h2>
+
+        <div>
+          <p>Adalberto shindy shindy</p>
+          <p>Bruno bruno bruno</p>
+          <p>Chang chang chang</p>
+          <p>Lucas Mendes Sales</p>
+          <p>Luiz luiz luiz</p>
+          <p>Victor victor victor</p>
+        </div>
+
+      </SectionColaboradores>
 
     </>
-  ) 
+  )
 
 }
 
@@ -98,5 +133,71 @@ const SectionEquipe = styled.section`
     height: 220px;
   }
 
+
+`
+
+const SectionOrigem = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  
+  h2{
+    margin-bottom: 20px;
+  } 
+
+  div{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 0 25px;
+
+
+      div{
+        width: 50%;
+        text-align: center;
+        flex-direction: column;
+
+        img{
+          width: 100%;
+          height: auto;
+          border: 1px solid grey;
+          border-radius: 40px 0 40px 0;
+        }
+
+      }
+
+    }
+
+`
+
+const SectionColaboradores = styled.section`
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 50px;
+
+    h2{
+      margin-bottom: 20px;
+    }
+
+    div{
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      text-align: center;
+      width: 60%;
+      max-width: 700px;
+    }
+
+    p{
+      margin: 10px;
+      font-size: 1.1rem;
+    }
 
 `
