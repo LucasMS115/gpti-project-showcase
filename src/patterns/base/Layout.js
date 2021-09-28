@@ -97,29 +97,34 @@ const GlobalStyle = createGlobalStyle`
         cursor: pointer;
     }
 
-    /* @media (min-width:480px) {
+    @media (max-width:479px) {
+         :root{
+             font-size: 62.5%;
+         }
+    }
+    @media (min-width:480px) and (max-width:599px) {
          :root{
              font-size: 70%;
          }
     }
-    @media (min-width:600px) { 
+    @media (min-width:600px) and (max-width: 800px){ 
         :root{
              font-size: 80%;
          }
     }
-    @media (min-width:801px) {
+    @media (min-width:801px) and (max-width: 1020px){
         :root{
              font-size: 90%;
         }
     }
-    @media (min-width:1021px) {
+    @media (min-width:1021px) and (max-width: 2199px){
         :root{
              font-size: 100%;
          }
     }
     @media (min-width:2200px) {
         :root{
-             font-size: 120%;
+             font-size: 110%;
          }
-    } */
+    }
 `;
