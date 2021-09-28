@@ -36,7 +36,6 @@ const GlobalStyle = createGlobalStyle`
 
     main{
         background: var(--color-background);
-        width: 80%;
         max-width: 1500px;
         margin: auto;
         min-height: 80vh;
@@ -120,6 +119,10 @@ const GlobalStyle = createGlobalStyle`
     @media (min-width:1021px) and (max-width: 2199px){
         :root{
              font-size: 100%;
+         }
+
+         main{
+             width: 80%;
          }
     }
     @media (min-width:2200px) {
