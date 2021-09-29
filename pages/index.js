@@ -96,7 +96,7 @@ const FirstSection = styled.section`
         text-align: center;
         flex-direction: column;
         min-width: 300px;
-        max-width: 600px;
+        max-width: 520px;
 
         img{
           width: 100%;
@@ -167,6 +167,7 @@ const SecondSection = styled.section`
       flex-direction: column;
       width: 15%;
       min-width: 75px;
+      max-width: 120px;
       margin: 10px 30px;
     }
 
