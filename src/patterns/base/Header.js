@@ -66,6 +66,10 @@ const HeaderContainer = styled.div`
 
     @media(max-width: 730px){
         text-align: center;
+        margin-top: 10px;
+        h2{
+            margin-bottom: 0px;
+        }
     }
 `
 

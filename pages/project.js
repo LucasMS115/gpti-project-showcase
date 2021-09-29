@@ -6,7 +6,7 @@ import pinguins from '../public/images/pinguins.jpg'
 
 export default function Project() {
 
-  return(
+  return (
     <>
       <Meta title='O Projeto' />
       <TextContainer>
@@ -18,23 +18,31 @@ export default function Project() {
 
       <SectionScreens>
 
+        <div>
           <div>
             <figure>
               <img src={pinguins} alt="Pinguins" />
             </figure>
+          </div>
 
+          <div>
+            <p>Texto que descreve um pouco de como o app funciona, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamsed quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </div>
+
+        <div>
+
+          <div>
             <p>Texto que descreve um pouco de como o app funciona, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamsed quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </div>
 
           <div>
-
-            <p>Texto que descreve um pouco de como o app funciona, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamsed quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
             <figure>
               <img src={pinguins} alt="Pinguins" />
             </figure>
-
           </div>
+
+        </div>
 
       </SectionScreens>
 
@@ -47,7 +55,7 @@ export default function Project() {
       </TextContainer>
 
     </>
-  ) 
+  )
 
 }
 
@@ -78,27 +86,62 @@ const SectionScreens = styled.section`
   div{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 50%;
+    justify-content: center;
+    width: 65%;
+    min-width: 200px;
+    max-width: 750px;
     margin: 20px auto 20px auto;
+
+    div{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin: 0 20px;
+    }
+
+    p{
+      text-align: center;
+    }
+  
+    //não precisa do crop aqui pras imagens finais
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  
+    figure{
+      margin-bottom: 10px;
+      width:200px;
+      height: 280px;
+    }
+
   }
 
-  p{
-    width: 45%;
-    text-align: center;
-  }
 
-  //não precisa do crop aqui pras imagens finais
-  img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-  }
+  @media(max-width: 730px){
+    div{
+      flex-direction: column;
+      margin: 0 10px;
 
-  figure{
-    margin-bottom: 10px;
-    width:200px;
-    height: 280px;
-  }
-` 
+      + div{
+        margin-bottom: 20px;
+      }
+
+      //não precisa do crop aqui pras imagens finais
+    
+      figure{
+        width:150px;
+        height: 210px;
+      }
+
+    }
+
+    div:nth-child(2){
+      flex-direction: column-reverse;
+    }
+
+  } 
+`
