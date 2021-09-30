@@ -25,7 +25,8 @@ export default function Meta ({ title, keywords, description }){
       <meta charSet='utf-8' />
       {/* <link rel='icon' href='.png' /> */}
       <link rel="preconnect" href="https://fonts.gstatic.com" />
-
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet" />
       <title>{title}</title>
 
     </Head>

@@ -9,10 +9,10 @@ export default function Header() {
     return (
         <HeaderContainer>
 
-            <div>
+            <HeaderTitle>
                 <h1>MeeTour</h1>
-                <h2>Alguma frase bonitinha pra servir como slogan do app</h2>
-            </div>
+                <h2>Conheça Pessoas</h2>
+            </HeaderTitle>
 
             <NavContainer>
 
@@ -53,6 +53,15 @@ export default function Header() {
         </HeaderContainer>
     )
 };
+
+const HeaderTitle = styled.div`
+    h1 {
+        background: var(--meetour);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+`
 
 const HeaderContainer = styled.div`
     width: 80%;

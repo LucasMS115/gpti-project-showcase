@@ -101,8 +101,8 @@ const FirstSection = styled.section`
         img{
           width: 100%;
           height: auto;
-          border: 1px solid grey;
-          border-radius: 0 40px 0 40px;
+          box-shadow: var(--default-shadow);
+          border-radius: 8px;
         }
 
       }
@@ -178,7 +178,7 @@ const SecondSection = styled.section`
     
     img{
       width: 100%;
-      border-radius: 100px;
+      border-radius: 50%;
       margin-bottom: 5px;
     }
 

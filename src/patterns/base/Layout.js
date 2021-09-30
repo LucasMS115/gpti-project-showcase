@@ -25,6 +25,9 @@ const GlobalStyle = createGlobalStyle`
         --color-tertiary: #1Bdff1;
         --color-text: black;
         --color-background: #ffffff;
+
+        --meetour: linear-gradient(130deg, #6951FF 0%, #8A94F0 100%);
+        --default-shadow: 0px -4px 8px rgba(0, 0, 0, 0.25)
     }
     
     * {
@@ -46,13 +49,13 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body, input {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Lato', sans-serif;
         font-size: 1.8rem;
     }
 
     h1, h2{
         color: var(--color-text);
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Lato', sans-serif;
         font-style: normal;
     }
     
@@ -69,7 +72,7 @@ const GlobalStyle = createGlobalStyle`
 
     h3, h4, h5, p, span{
         color: var(--color-text);
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Lato', sans-serif;
         font-style: normal;
     }
 
