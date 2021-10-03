@@ -22,6 +22,7 @@ const GlobalStyle = createGlobalStyle`
         /* paleta de cores */
         --color-primary: #131313;
         --color-secondary: #3d00f3;
+        --color-light-purple: #6951FF;
         --color-tertiary: #1Bdff1;
         --color-text: black;
         --color-background: #ffffff;
