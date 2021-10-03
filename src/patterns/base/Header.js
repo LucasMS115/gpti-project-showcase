@@ -177,7 +177,7 @@ const SideNav = styled.div`
         width: 70%;
         height: 100vh;
         padding-top: 60px;
-        background: var(--color-primary);
+        background: var(--color-secondary);
         
         ul {
             list-style-type: none;
@@ -193,7 +193,7 @@ const SideNav = styled.div`
                 a {
                     font-size: 1.75rem;
                     text-decoration: none;
-                    color: var(--color-tertiary);
+                    color: white;
                 }
             }
 

@@ -20,7 +20,7 @@ export default function Layout({ children }) {
 const GlobalStyle = createGlobalStyle`
     :root {
         /* paleta de cores */
-        --color-primary: #131313;
+        --color-primary: #1f1e2e;
         --color-secondary: #3d00f3;
         --color-light-purple: #6951FF;
         --color-tertiary: #1Bdff1;
