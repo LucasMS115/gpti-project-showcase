@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import { withRouter } from 'next/router'
 import Link from 'next/link'
 import styled, { css } from 'styled-components'
 
-export default function Header() {
+function Header({ router }) {
 
     const [toggle, setToggle] = useState(false);
 
@@ -19,10 +20,10 @@ export default function Header() {
                 <DesktopNav>            
                     <nav>
                         <ul>
-                            <li><Link href="/"><a>Home</a></Link></li>
-                            <li><Link href="/project"><a>Sobre o MeeTour</a></Link></li>
-                            <li><Link href="/us"><a>Sobre o time</a></Link></li>
-                            <li><Link href="/planning"><a>Entregas e Planejamento</a></Link></li>
+                            <Link href="/"><NavItem active={router.pathname === '/'}>Home</NavItem></Link>
+                            <Link href="/project"><NavItem active={router.pathname === '/project'}>Sobre o MeeTour</NavItem></Link>
+                            <Link href="/us"><NavItem active={router.pathname === '/us'}>Sobre o time</NavItem></Link>
+                            <Link href="/planning"><NavItem active={router.pathname === '/planning'}>Entregas e Planejamento</NavItem></Link>
                         </ul>
                     </nav>
                 </ DesktopNav> 
@@ -86,24 +87,30 @@ const NavContainer = styled.div`
     width: 100%;
     display: flex;
     padding: 10px 0 10px 0;
-    border-bottom: 1px solid grey;
 
     ul{
         list-style-type: none;  
         display: flex;
-
-        li{
-            margin-right: 25px; 
-            font-size: 1rem;
-        }
-
-        li:hover{
-            color: var(--color-secondary);
-        }
     }
 
     @media(max-width: 731px){
         border-bottom: none;
+    }
+`
+
+const NavItem = styled.li`
+    margin-right: 25px; 
+    font-size: 1rem;
+    padding: 15px 0;
+    cursor: pointer;
+
+    color: ${props => props.active === true ? 'var(--color-secondary)' : '#666666'};
+    font-weight: ${props => props.active === true ? 'bold' : 'regular'};
+    border-bottom: ${props => '3px solid ' + (props.active ? 'var(--color-secondary)' : 'transparent')};
+
+    &:hover{
+        color: var(--color-light-purple);
+        border-bottom: 3px solid var(--color-light-purple);
     }
 `
 
@@ -193,3 +200,5 @@ const SideNav = styled.div`
         }
     }
 `
+
+export default withRouter(Header)
