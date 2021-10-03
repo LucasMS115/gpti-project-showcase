@@ -7,6 +7,7 @@ import lucas from '../public/images/us/lucas.jpg'
 import victor from '../public/images/us/victor.jpg'
 import bruno from '../public/images/us/bruno.jpeg'
 import shindy from '../public/images/us/shindy.jpeg'
+import meet from '../public/images/us/meet.gif'
 
 export default function Us() {
 
@@ -62,11 +63,11 @@ export default function Us() {
         <div>
 
           <div>
-            <p>Texto que explique a origem do grupo e da ideia blaba, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Somos quatro estudantes do curso de Sistemas de Informação (2019), e a alguns semestres fazemos trabalhos em grupo juntos. A ideia do projeto surgiu durante um brainstorming para o tema de projeto das matérias de Resolução de Problemas II e Gestão de Projetos de Tecnologia da Informação, combinando uma idea de um aplicativo de eventos e um dos Objetivos de Desenvolvimento Sustentável(ODS).</p>
           </div>
 
           <div>
-            <img src={pinguins} alt="Masp" />
+            <img src={meet} alt="Meet" />
           </div>
 
         </div>
@@ -80,12 +81,12 @@ export default function Us() {
         <h2>Colaboradores do Projeto</h2>
 
         <div>
-          <p>Adalberto shindy shindy</p>
-          <p>Bruno bruno bruno</p>
-          <p>Chang chang chang</p>
+          <p>Adalberto Shindy</p>
+          <p>Bruno Contreras</p>
+          <p>Daniel Chang</p>
           <p>Lucas Mendes Sales</p>
-          <p>Luiz luiz luiz</p>
-          <p>Victor victor victor</p>
+          <p>Luiz Felipe Vieira Cordeiro</p>
+          <p>Victor Lopes</p>
         </div>
 
       </SectionColaboradores>
