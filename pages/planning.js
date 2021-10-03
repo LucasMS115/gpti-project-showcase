@@ -1,33 +1,42 @@
+import { useState } from 'react'
 import styled from 'styled-components'
 import Meta from '../src/infra/Meta'
-import placeholder from '../public/images/planning/placeholder.png'
 import PlanningItem from '../src/components/PlanningItem'
 import Separator from '../src/components/Separator'
 
+import EAP from '../public/images/planning/EAP.jpg'
+
 export default function Planning() {
+  const [activeItem, setActiveItem] = useState('eap')
+
+  function renderActiveItem () {
+    if (activeItem === 'eap') {
+      return (
+        <PlanningItem
+          title="Estrutura Analítica de Projetos (EAP)"
+          image={EAP}
+        />
+      )
+    } else if (activeItem === 'canvas') {
+      return (
+        <PlanningItem
+          title="Entrega 2"
+          image={EAP}
+          description="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
+        />
+      )
+    }
+  }
 
   return (
     <>
-      <Meta title='Planejamento' />
-      <Intro>
-        <h2>Título da descrição da página</h2>
-        <p>Texto que descreve o que tem nesta página, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </Intro>
-
-      <PlanningItem
-        title="Título da entrega"
-        image={placeholder}
-        description="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
-      />
-
-      <Separator />
-
-      <PlanningItem
-        title="Título da entrega"
-        image={placeholder}
-        description="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
-      />
-      
+      <SubMenu>
+        <ul>
+          <NavItem active={activeItem === 'eap'} onClick={() => setActiveItem('eap')}>EAP</NavItem>
+          <NavItem active={activeItem === 'canvas'} onClick={() => setActiveItem('canvas')}>Canvas</NavItem>
+        </ul>
+      </SubMenu>
+      { renderActiveItem() }
     </>
   )
 
@@ -48,4 +57,22 @@ const Intro = styled.div`
     margin-bottom: 10px;
   }
 
+`
+
+const SubMenu = styled.nav`
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: wrap;
+  }
+`
+
+const NavItem = styled.li`
+    font-size: 1rem;
+    padding: 20px 20px;
+    cursor: pointer;
+    border-radius: 50px;
+
+    background-color:  ${props => props.active === true ? 'var(--color-light-purple)' : 'transparent'};
+    color: ${props => props.active === true ? 'white' : 'var(--color-light-purple)'};
 `
