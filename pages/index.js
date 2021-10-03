@@ -3,6 +3,9 @@ import Meta from '../src/infra/Meta'
 import Separator from '../src/components/Separator'
 import masp from '../public/images/meetings/masp.jpg'
 import lucas from '../public/images/us/lucas.jpg'
+import victor from '../public/images/us/victor.jpg'
+import bruno from '../public/images/us/bruno.jpeg'
+import shindy from '../public/images/us/shindy.jpeg'
 
 export default function Home() {
 
@@ -11,9 +14,6 @@ export default function Home() {
       <Meta title='Home' />
 
       <FirstSection>
-
-        <h2>Se tiver algum Título</h2>
-
         <div>
 
           <div>
@@ -21,8 +21,8 @@ export default function Home() {
           </div>
 
           <div>
-            <h3>Frase que represente o objetivo do app de algum jeito</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h3>Um novo meio para descobrir novas pessoas com interesses mútuos e redescobrir a cidade de São Paulo com o que ela tem de melhor para oferecer.</h3>
+            <p>Um app mobile cujo objetivo consiste em  reunir pessoas através de encontros relacionados a pontos turísticos e culturais na cidade de São Paulo, uma medida para promover a socialização de pessoas interessadas em encontros pessoais realizados nesses ambientes, bem como ressaltar a história e as atrações da cidade.</p>
           </div>
 
         </div>
@@ -39,12 +39,12 @@ export default function Home() {
         <div>
 
           <figure>
-            <img src={lucas} alt="Adalberto Shindy" />
+            <img src={shindy} alt="Adalberto Shindy" />
             <figcaption>Shindy</figcaption>
           </figure>
 
           <figure>
-            <img src={lucas} alt="Bruno Contreras" />
+            <img src={bruno} alt="Bruno Contreras" />
             <figcaption>Bruno</figcaption>
           </figure>
 
@@ -54,7 +54,7 @@ export default function Home() {
           </figure>
 
           <figure>
-            <img src={lucas} alt="Victor Ferreira" />
+            <img src={victor} alt="Victor Lopes" />
             <figcaption>Victor</figcaption>
           </figure>
           

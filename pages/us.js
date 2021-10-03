@@ -4,6 +4,9 @@ import Separator from '../src/components/Separator'
 
 import pinguins from '../public/images/pinguins.jpg'
 import lucas from '../public/images/us/lucas.jpg'
+import victor from '../public/images/us/victor.jpg'
+import bruno from '../public/images/us/bruno.jpeg'
+import shindy from '../public/images/us/shindy.jpeg'
 
 export default function Us() {
 
@@ -19,6 +22,20 @@ export default function Us() {
 
           <div>
             <figure>
+              <img src={shindy} alt="Adalberto Shindy" />
+            </figure>
+            <p>Adalberto Shindy</p>
+          </div>
+
+          <div>
+            <figure>
+              <img src={bruno} alt="Bruno Contreras" />
+            </figure>
+            <p>Bruno Contreras</p>
+          </div>
+
+          <div>
+            <figure>
               <img src={lucas} alt="Lucas Mendes Sales" />
             </figure>
             <p>Lucas M. Sales</p>
@@ -26,23 +43,9 @@ export default function Us() {
 
           <div>
             <figure>
-              <img src={pinguins} alt="Pinguins" />
+              <img src={victor} alt="Victor Lopes" />
             </figure>
-            <p>Pinguins</p>
-          </div>
-
-          <div>
-            <figure>
-              <img src={lucas} alt="Lucas Mendes Sales" />
-            </figure>
-            <p>Lucas M. Sales</p>
-          </div>
-
-          <div>
-            <figure>
-              <img src={pinguins} alt="Pinguins" />
-            </figure>
-            <p>Pinguins</p>
+            <p>Victor Lopes</p>
           </div>
 
         </div>
