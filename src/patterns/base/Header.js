@@ -107,6 +107,8 @@ const NavItem = styled.li`
     color: ${props => props.active === true ? 'var(--color-secondary)' : '#666666'};
     font-weight: ${props => props.active === true ? 'bold' : 'regular'};
     border-bottom: ${props => '3px solid ' + (props.active ? 'var(--color-secondary)' : 'transparent')};
+    transition: 300ms;
+    transition-timing-function: ease-in-out;
 
     &:hover{
         color: var(--color-light-purple);
