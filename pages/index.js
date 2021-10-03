@@ -21,8 +21,8 @@ export default function Home() {
           </div>
 
           <div>
-            <h3>Um novo meio para descobrir novas pessoas com interesses mútuos e redescobrir a cidade de São Paulo com o que ela tem de melhor para oferecer.</h3>
-            <p>Um app mobile cujo objetivo consiste em  reunir pessoas através de encontros relacionados a pontos turísticos e culturais na cidade de São Paulo, uma medida para promover a socialização de pessoas interessadas em encontros pessoais realizados nesses ambientes, bem como ressaltar a história e as atrações da cidade.</p>
+            <h3>Um novo meio para descobrir novas pessoas com interesses mútuos e redescobrir a cidade de São Paulo.</h3>
+            <p>Um app mobile cujo objetivo consiste em  reunir pessoas através de encontros relacionados a pontos turísticos e culturais na cidade de São Paulo.</p>
           </div>
 
         </div>
@@ -33,8 +33,7 @@ export default function Home() {
 
       <SecondSection>
 
-        <p>Breve apresentação do time</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim </p>
+        <p>Nosso time</p>
 
         <div>
 
