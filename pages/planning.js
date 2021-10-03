@@ -2,9 +2,9 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import Meta from '../src/infra/Meta'
 import PlanningItem from '../src/components/PlanningItem'
-import Separator from '../src/components/Separator'
 
 import EAP from '../public/images/planning/EAP.jpg'
+import inProgress from '../public/images/planning/in_progress.gif'
 
 export default function Planning() {
   const [activeItem, setActiveItem] = useState('eap')
@@ -20,9 +20,9 @@ export default function Planning() {
     } else if (activeItem === 'canvas') {
       return (
         <PlanningItem
-          title="Entrega 2"
-          image={EAP}
-          description="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
+          title="Canvas"
+          image={inProgress}
+          description="brb"
         />
       )
     }
@@ -30,6 +30,7 @@ export default function Planning() {
 
   return (
     <>
+      <Meta title='Planejamento' />
       <SubMenu>
         <ul>
           <NavItem active={activeItem === 'eap'} onClick={() => setActiveItem('eap')}>EAP</NavItem>
