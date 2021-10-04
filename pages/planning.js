@@ -6,7 +6,7 @@ import EAPTable from '../src/components/EAPTable'
 
 
 import EAP from '../public/images/planning/EAP.jpg'
-import inProgress from '../public/images/planning/in_progress.gif'
+import Canvas from '../public/images/planning/canvas.png'
 
 export default function Planning() {
   const [activeItem, setActiveItem] = useState('eap')
@@ -26,8 +26,8 @@ export default function Planning() {
       return (
         <PlanningItem
           title="Canvas"
-          image={inProgress}
-          description="brb"
+          image={Canvas}
+          description=""
         />
       )
     }
