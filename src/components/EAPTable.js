@@ -171,7 +171,8 @@ export default function EAPTable () {
 }
 
 const Table = styled.table`
-
+    margin-bottom: 50px;
+    
     th {
         background-color: var(--color-light-purple);
         padding: 5px 10px;
