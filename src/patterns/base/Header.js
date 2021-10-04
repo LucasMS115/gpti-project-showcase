@@ -12,7 +12,7 @@ function Header({ router }) {
 
             <HeaderTitle>
                 <h1>MeeTour</h1>
-                <h2>Conheça Pessoas</h2>
+                <h2>Conheça São Paulo, conheça pessoas</h2>
             </HeaderTitle>
 
             <NavContainer>

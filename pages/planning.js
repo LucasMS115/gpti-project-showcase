@@ -2,6 +2,8 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import Meta from '../src/infra/Meta'
 import PlanningItem from '../src/components/PlanningItem'
+import EAPTable from '../src/components/EAPTable'
+
 
 import EAP from '../public/images/planning/EAP.jpg'
 import inProgress from '../public/images/planning/in_progress.gif'
@@ -12,10 +14,13 @@ export default function Planning() {
   function renderActiveItem () {
     if (activeItem === 'eap') {
       return (
-        <PlanningItem
-          title="Estrutura Analítica de Projetos (EAP)"
-          image={EAP}
-        />
+        <>
+          <PlanningItem
+            title="Estrutura Analítica de Projetos (EAP)"
+            image={EAP}
+          />
+          <EAPTable />
+        </>
       )
     } else if (activeItem === 'canvas') {
       return (
