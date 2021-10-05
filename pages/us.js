@@ -7,7 +7,7 @@ import lucas from '../public/images/us/lucas.jpg'
 import victor from '../public/images/us/victor.jpg'
 import bruno from '../public/images/us/bruno.jpeg'
 import shindy from '../public/images/us/shindy.jpeg'
-import meet from '../public/images/us/meet.gif'
+import each from '../public/images/about/each.jpg'
 
 export default function Us() {
 
@@ -67,7 +67,7 @@ export default function Us() {
           </div>
 
           <div>
-            <img src={meet} alt="Meet" />
+            <img src={each} alt="Each" />
           </div>
 
         </div>
@@ -246,9 +246,10 @@ const SectionOrigem = styled.section`
 
         img{
           width: 100%;
-          height: auto;
-          border: 1px solid grey;
-          border-radius: 0 40px 0 40px;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 8px;
+          box-shadow: var(--default-shadow);   
         }
 
       }
