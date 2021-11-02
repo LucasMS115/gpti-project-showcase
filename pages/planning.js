@@ -7,6 +7,8 @@ import EAPTable from '../src/components/EAPTable'
 
 import EAP from '../public/images/planning/EAP.jpg'
 import Canvas from '../public/images/planning/canvas.png'
+import EAR from '../public/images/planning/EAR.png'
+import RACI from '../public/images/planning/matriz-raci.png'
 
 export default function Planning() {
   const [activeItem, setActiveItem] = useState('eap')
@@ -30,6 +32,22 @@ export default function Planning() {
           description=""
         />
       )
+    } else if (activeItem === 'ear') {
+      return (
+        <PlanningItem
+          title="Estrutura Analítica de Recursos"
+          image={EAR}
+          description=""
+        />
+      )
+    } else if (activeItem === 'raci') {
+      return (
+        <PlanningItem
+          title="Matriz RACI"
+          image={RACI}
+          description="FE = Front End | BE = Back-End."
+        />
+      )
     }
   }
 
@@ -38,8 +56,10 @@ export default function Planning() {
       <Meta title='Planejamento' />
       <SubMenu>
         <ul>
-          <NavItem active={activeItem === 'eap'} onClick={() => setActiveItem('eap')}>EAP</NavItem>
           <NavItem active={activeItem === 'canvas'} onClick={() => setActiveItem('canvas')}>Canvas</NavItem>
+          <NavItem active={activeItem === 'eap'} onClick={() => setActiveItem('eap')}>EAP</NavItem>
+          <NavItem active={activeItem === 'ear'} onClick={() => setActiveItem('ear')}>EAR</NavItem>
+          <NavItem active={activeItem === 'raci'} onClick={() => setActiveItem('raci')}>Matriz Raci</NavItem>
         </ul>
       </SubMenu>
       { renderActiveItem() }

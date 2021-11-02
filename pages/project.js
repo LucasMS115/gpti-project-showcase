@@ -26,14 +26,14 @@ export default function Project() {
           </div>
 
           <div>
-            <p>Um app mobile cujo objetivo consiste em reunir pessoas através de encontros relacionados a pontos turísticos e culturais na cidade de São Paulo, uma medida para promover a socialização de pessoas interessadas em encontros pessoais realizados nesses ambientes, bem como ressaltar a história e as atrações da cidade.</p>
+            <p>O app mostrará eventos que acontecerão em locais próximos ou dentro de uma área específica que você pode definir. Os eventos serão mostrados um de cada vez, e, caso tenha interesse, ao clicar no botão à direita, o app exibirá mais informações sobre aquele evento, caso não, pode clicar no botão à esquerda e um novo evento será sugerido.</p>
           </div>
         </div>
 
         <div>
 
           <div>
-            <p>Diante do cenário pós-pandemia, a aplicação pode satisfazer o anseio de muitos pelo retorno de atividades ao ar livre, em pontos que até então estavam restritos pelas normas sanitárias em vigor.</p>
+            <p>O app conterá informações detalhadas sobre o local, data, descrição, pessoas que confirmaram presença pelo MeeTour, informações de acessibilidade, além de de um link para visualização de fotos do local no Instagram.</p>
           </div>
 
           <div>
@@ -50,7 +50,7 @@ export default function Project() {
 
       <TextContainer>
 
-        <p>O aplicativo se propõe como um meio para descobrir novas pessoas com interesses mútuos e redescobrir a cidade de São Paulo com o que ela tem de melhor para oferecer.</p>
+        <p>Diante do cenário pós-pandemia, a aplicação pode satisfazer o anseio de muitos pelo retorno de atividades ao ar livre, em pontos que até então estavam restritos pelas normas sanitárias em vigor.</p>
 
       </TextContainer>
 
