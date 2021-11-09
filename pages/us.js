@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import Meta from '../src/infra/Meta'
 import Separator from '../src/components/Separator'
 
-import pinguins from '../public/images/pinguins.jpg'
 import lucas from '../public/images/us/lucas.jpg'
 import victor from '../public/images/us/victor.jpg'
 import bruno from '../public/images/us/bruno.jpeg'
