@@ -9,9 +9,11 @@ import EAP from '../public/images/planning/EAP.jpg'
 import Canvas from '../public/images/planning/canvas.png'
 import EAR from '../public/images/planning/EAR.png'
 import RACI from '../public/images/planning/matriz-raci.png'
+import Qualidade from '../public/images/planning/qualidade.png'
+import Custos from '../public/images/planning/bottom_up.png'
 
 export default function Planning() {
-  const [activeItem, setActiveItem] = useState('eap')
+  const [activeItem, setActiveItem] = useState('canvas')
 
   function renderActiveItem () {
     if (activeItem === 'eap') {
@@ -48,6 +50,20 @@ export default function Planning() {
           description="FE = Front End | BE = Back-End."
         />
       )
+    } else if (activeItem === 'costs') {
+      return (
+        <PlanningItem
+          title="Estimativa de custos do projeto"
+          image={Custos}
+        />
+      )
+    } else if (activeItem === 'qualidade') {
+      return (
+        <PlanningItem
+          title="Algumas métricas iniciais de qualidade do projeto"
+          image={Qualidade}
+        />
+      )
     }
   }
 
@@ -60,6 +76,8 @@ export default function Planning() {
           <NavItem active={activeItem === 'eap'} onClick={() => setActiveItem('eap')}>EAP</NavItem>
           <NavItem active={activeItem === 'ear'} onClick={() => setActiveItem('ear')}>EAR</NavItem>
           <NavItem active={activeItem === 'raci'} onClick={() => setActiveItem('raci')}>Matriz Raci</NavItem>
+          <NavItem active={activeItem === 'costs'} onClick={() => setActiveItem('costs')}>Custos</NavItem>
+          <NavItem active={activeItem === 'qualidade'} onClick={() => setActiveItem('qualidade')}>Qualidade</NavItem>
         </ul>
       </SubMenu>
       { renderActiveItem() }
