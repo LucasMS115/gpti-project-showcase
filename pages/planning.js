@@ -2,8 +2,8 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import Meta from '../src/infra/Meta'
 import PlanningItem from '../src/components/PlanningItem'
+import PdfFrame from '../src/components/PdfFrame'
 import EAPTable from '../src/components/EAPTable'
-
 
 import EAP from '../public/images/planning/EAP.jpg'
 import Canvas from '../public/images/planning/canvas.png'
@@ -11,11 +11,12 @@ import EAR from '../public/images/planning/EAR.png'
 import RACI from '../public/images/planning/matriz-raci.png'
 import Qualidade from '../public/images/planning/qualidade.png'
 import Custos from '../public/images/planning/bottom_up.png'
+// import Ciclos from '../public/documents/ciclos_desenvolvimento.pdf'
 
 export default function Planning() {
   const [activeItem, setActiveItem] = useState('canvas')
 
-  function renderActiveItem () {
+  function renderActiveItem() {
     if (activeItem === 'eap') {
       return (
         <>
@@ -64,7 +65,21 @@ export default function Planning() {
           image={Qualidade}
         />
       )
+    } else if (activeItem === 'ciclos') {
+      return (
+        <PdfFrame
+          link="https://drive.google.com/file/d/1QqksgJgz6xSjnEQoSlPRhArL-7dicgrV/preview"
+        />
+      )
+    } else if (activeItem === 'termo') {
+      return (
+        <PdfFrame
+          link="https://drive.google.com/file/d/1rmutAid2cCOAaSfesjHClInoypoaVWPo/preview"
+        />
+      )
     }
+
+
   }
 
   return (
@@ -78,9 +93,11 @@ export default function Planning() {
           <NavItem active={activeItem === 'raci'} onClick={() => setActiveItem('raci')}>Matriz Raci</NavItem>
           <NavItem active={activeItem === 'costs'} onClick={() => setActiveItem('costs')}>Custos</NavItem>
           <NavItem active={activeItem === 'qualidade'} onClick={() => setActiveItem('qualidade')}>Qualidade</NavItem>
+          <NavItem active={activeItem === 'ciclos'} onClick={() => setActiveItem('ciclos')}>Ciclos</NavItem>
+          <NavItem active={activeItem === 'termo'} onClick={() => setActiveItem('termo')}>Termo de Abertura</NavItem>
         </ul>
       </SubMenu>
-      { renderActiveItem() }
+      {renderActiveItem()}
     </>
   )
 
