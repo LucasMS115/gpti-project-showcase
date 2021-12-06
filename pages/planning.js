@@ -112,59 +112,66 @@ export default function Planning() {
         </>
       )
     } else if (activeItem === 'interessados') {
-    return (
-      <>
-        <PdfFrame
-          link="https://drive.google.com/file/d/1ra9ppKy22VxsAmddZlsjk_wHHUWsSZWE/preview"
-        />
-      </>
-    )
+      return (
+        <>
+          <PdfFrame
+            link="https://drive.google.com/file/d/1ra9ppKy22VxsAmddZlsjk_wHHUWsSZWE/preview"
+          />
+        </>
+      )
+    }
+    else if (activeItem === 'integracao') {
+      return (
+        <>
+          <PdfFrame
+            link="https://drive.google.com/file/d/1z8teG2yLfCZdxTYBXOxOtlAVwFsEbQ1A/preview"
+          />
+        </>
+      )
+    } else if (activeItem === 'termoV2') {
+      return (
+        <>
+          <PdfFrame
+            link="https://drive.google.com/file/d/1buEr8bsIhunKlFavg-J-KAHDGLeOpCEm/preview"
+          />
+        </>
+      )
+    } else if (activeItem === 'pitch') {
+      return (
+        <VideoSection>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/-62HqWFDPtY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </VideoSection>
+      )
+    }
+
+
   }
-  else if (activeItem === 'integracao') {
-    return (
-      <>
-        <PdfFrame
-          link="https://drive.google.com/file/d/1z8teG2yLfCZdxTYBXOxOtlAVwFsEbQ1A/preview"
-        />
-      </>
-    )
-  } else if (activeItem === 'termoV2') {
-    return (
-      <>
-        <PdfFrame
-          link="https://drive.google.com/file/d/1buEr8bsIhunKlFavg-J-KAHDGLeOpCEm/preview"
-        />
-      </>
-    )
-  }
 
-
-}
-
-return (
-  <>
-    <Meta title='Planejamento' />
-    <SubMenu>
-      <ul>
-        <NavItem active={activeItem === 'canvas'} onClick={() => setActiveItem('canvas')}>Canvas</NavItem>
-        <NavItem active={activeItem === 'eap'} onClick={() => setActiveItem('eap')}>EAP</NavItem>
-        <NavItem active={activeItem === 'ear'} onClick={() => setActiveItem('ear')}>EAR</NavItem>
-        <NavItem active={activeItem === 'raci'} onClick={() => setActiveItem('raci')}>Matriz Raci</NavItem>
-        <NavItem active={activeItem === 'costs'} onClick={() => setActiveItem('costs')}>Custos</NavItem>
-        <NavItem active={activeItem === 'qualidade'} onClick={() => setActiveItem('qualidade')}>Qualidade</NavItem>
-        <NavItem active={activeItem === 'ciclos'} onClick={() => setActiveItem('ciclos')}>Ciclos</NavItem>
-        <NavItem active={activeItem === 'termo'} onClick={() => setActiveItem('termo')}>Termo de Abertura</NavItem>
-        <NavItem active={activeItem === 'comunicacao'} onClick={() => setActiveItem('comunicacao')}>Comunicação</NavItem>
-        <NavItem active={activeItem === 'riscos'} onClick={() => setActiveItem('riscos')}>Riscos</NavItem>
-        <NavItem active={activeItem === 'aquisicoes'} onClick={() => setActiveItem('aquisicoes')}>Aquisições</NavItem>
-        <NavItem active={activeItem === 'interessados'} onClick={() => setActiveItem('interessados')}>Partes Interessadas</NavItem>
-        <NavItem active={activeItem === 'integracao'} onClick={() => setActiveItem('integracao')}>Integração</NavItem>
-        <NavItem active={activeItem === 'termoV2'} onClick={() => setActiveItem('termoV2')}>Termo de Abertura (V2)</NavItem>
-      </ul>
-    </SubMenu>
-    {renderActiveItem()}
-  </>
-)
+  return (
+    <>
+      <Meta title='Planejamento' />
+      <SubMenu>
+        <ul>
+          <NavItem active={activeItem === 'canvas'} onClick={() => setActiveItem('canvas')}>Canvas</NavItem>
+          <NavItem active={activeItem === 'eap'} onClick={() => setActiveItem('eap')}>EAP</NavItem>
+          <NavItem active={activeItem === 'ear'} onClick={() => setActiveItem('ear')}>EAR</NavItem>
+          <NavItem active={activeItem === 'raci'} onClick={() => setActiveItem('raci')}>Matriz Raci</NavItem>
+          <NavItem active={activeItem === 'costs'} onClick={() => setActiveItem('costs')}>Custos</NavItem>
+          <NavItem active={activeItem === 'qualidade'} onClick={() => setActiveItem('qualidade')}>Qualidade</NavItem>
+          <NavItem active={activeItem === 'ciclos'} onClick={() => setActiveItem('ciclos')}>Ciclos</NavItem>
+          <NavItem active={activeItem === 'termo'} onClick={() => setActiveItem('termo')}>Termo de Abertura</NavItem>
+          <NavItem active={activeItem === 'comunicacao'} onClick={() => setActiveItem('comunicacao')}>Comunicação</NavItem>
+          <NavItem active={activeItem === 'riscos'} onClick={() => setActiveItem('riscos')}>Riscos</NavItem>
+          <NavItem active={activeItem === 'aquisicoes'} onClick={() => setActiveItem('aquisicoes')}>Aquisições</NavItem>
+          <NavItem active={activeItem === 'interessados'} onClick={() => setActiveItem('interessados')}>Partes Interessadas</NavItem>
+          <NavItem active={activeItem === 'integracao'} onClick={() => setActiveItem('integracao')}>Integração</NavItem>
+          <NavItem active={activeItem === 'termoV2'} onClick={() => setActiveItem('termoV2')}>Termo de Abertura (V2)</NavItem>
+          <NavItem active={activeItem === 'pitch'} onClick={() => setActiveItem('pitch')}>Pitch</NavItem>
+        </ul>
+      </SubMenu>
+      {renderActiveItem()}
+    </>
+  )
 
 }
 
@@ -201,4 +208,20 @@ const NavItem = styled.li`
 
     background-color:  ${props => props.active === true ? 'var(--color-light-purple)' : 'transparent'};
     color: ${props => props.active === true ? 'white' : 'var(--color-light-purple)'};
+`
+
+const VideoSection = styled.section`
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+
+  iframe{
+    margin: auto;
+    width: 70%;
+    height: 70%;
+  }
+
 `
